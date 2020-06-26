@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 from telnetlib import Telnet
+import json
 
 
 class EnvStatus:
 
-    def __init__(self,ip,jira='www.python.org'):
+    def __init__(self):
         """检查测试机访问指定服务器的端口是否连通。
 
            包含：
@@ -29,13 +30,8 @@ class EnvStatus:
         except:
             return 1
 
-
-if __name__ == "__main__":
-    target = []
-    for i in range(5):
-        e = EnvStatus('aaa')
-        target.append(e.__dict__)
-    print(target)
+e = EnvStatus()
+print("++" + json.dumps(e.__dict__) + "++")
 
 
 
