@@ -15,7 +15,7 @@ class EnvStatus:
             Jenkins:
             KnoxPortal:
         """
-        self.ip = ''
+        self.ip = '8'
         self.jira_status = 0
         self.testopia_status = 0
         self.github_status = 0
